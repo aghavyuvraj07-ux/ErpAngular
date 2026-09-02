@@ -1,0 +1,29 @@
+<h2>Student Details</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>City</th>
+      <th>Course</th>
+      <th>Discount</th>
+      <th>Registration Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.StudentId }}</td>
+      <td>{{ student.StudentName }}</td>
+      <td>{{ student.EmailAddress }}</td>
+      <td>{{ student.MobileNumber }}</td>
+      <td>{{ student.City }}</td>
+      <td>{{ student.Course }}</td>
+      <td>{{ student.Discount }}</td>
+      <td>{{ student.RegistrationDate }}</td>
+    </tr>
+  </tbody>
+</table>

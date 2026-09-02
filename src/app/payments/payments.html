@@ -1,0 +1,27 @@
+<h2>Student Payments</h2>
+
+<p>Total Payments: {{ payments.length }}</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Payment ID</th>
+      <th>Student</th>
+      <th>Payment Date</th>
+      <th>Payment Amount</th>
+      <th>Payment Mode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let payment of payments">
+      <td>{{ payment.PaymentId }}</td>
+      <td>{{ payment.Student }}</td>
+      <td>{{ payment.PaymentDate }}</td>
+      <td>{{ payment.PaymentAmount }}</td>
+      <td>{{ payment.PaymentMode }}</td>
+      <td>{{ payment.PaymentDescription }}</td>
+    </tr>
+  </tbody>
+</table>

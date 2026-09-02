@@ -1,0 +1,21 @@
+<h2>Training Courses</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+      <th>Course Fees</th>
+      <th>GST</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.CourseId }}</td>
+      <td>{{ course.CourseName }}</td>
+      <td>{{ course.CourseFees }}</td>
+      <td>{{ course.GST }}</td>
+    </tr>
+  </tbody>
+</table>
