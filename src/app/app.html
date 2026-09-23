@@ -1,11 +1,161 @@
-<h1>ERP System</h1>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark px-4">
+  <a class="navbar-brand fw-bold" href="#">
+    ERP System
+  </a>
 
-<app-courses></app-courses>
+  <span class="text-white">
+    Training & Student Management
+  </span>
+</nav>
 
-<hr>
+<div class="container-fluid">
+  <div class="row">
 
-<app-students></app-students>
+    <!-- Sidebar -->
+    <aside class="col-md-2 bg-light border-end min-vh-100 p-3">
 
-<hr>
+      <h5 class="fw-bold mb-4">Menu</h5>
 
-<app-payments></app-payments>
+      <div class="nav flex-column gap-2">
+
+        <a class="nav-link active bg-primary text-white rounded" href="#">
+          Dashboard
+        </a>
+
+        <a class="nav-link text-dark" href="#courses">
+          Training Courses
+        </a>
+
+        <a class="nav-link text-dark" href="#students">
+          Students
+        </a>
+
+        <a class="nav-link text-dark" href="#payments">
+          Payments
+        </a>
+
+      </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="col-md-10 p-4">
+
+      <!-- Page Header -->
+      <div class="mb-4">
+        <h2 class="fw-bold">Dashboard</h2>
+
+        <p class="text-muted">
+          Training and Student Management System
+        </p>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="row g-3 mb-4">
+
+        <!-- Courses Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+              <h6 class="text-muted">
+                Training Courses
+              </h6>
+
+              <h2 class="fw-bold">
+                {{ courseCount }}
+              </h2>
+
+              <p class="mb-0 text-muted">
+                Available Courses
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Students Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+              <h6 class="text-muted">
+                Students
+              </h6>
+
+              <h2 class="fw-bold">
+                {{ studentCount }}
+              </h2>
+
+              <p class="mb-0 text-muted">
+                Registered Students
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Payments Card -->
+        <div class="col-md-4">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+              <h6 class="text-muted">
+                Payments
+              </h6>
+
+              <h2 class="fw-bold">
+                {{ paymentCount }}
+              </h2>
+
+              <p class="mb-0 text-muted">
+                Payment Records
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Courses Section -->
+      <section
+        id="courses"
+        class="card shadow-sm border-0 mb-4"
+      >
+        <div class="card-body">
+
+          <app-courses></app-courses>
+
+        </div>
+      </section>
+
+      <!-- Students Section -->
+      <section
+        id="students"
+        class="card shadow-sm border-0 mb-4"
+      >
+        <div class="card-body">
+
+          <app-students></app-students>
+
+        </div>
+      </section>
+
+      <!-- Payments Section -->
+      <section
+        id="payments"
+        class="card shadow-sm border-0 mb-4"
+      >
+        <div class="card-body">
+
+          <app-payments></app-payments>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+</div>
